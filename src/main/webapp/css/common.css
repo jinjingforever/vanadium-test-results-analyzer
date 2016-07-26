@@ -1,0 +1,28 @@
+#err-msg {
+  color: #AA0000;
+  display: none;
+}
+
+#loading-msg {
+  color: #999;
+}
+
+#options-container {
+  margin-bottom: 24px;
+}
+
+.options-title {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.options-row {
+  display: flex;
+  padding: 2px 0px 2px 0px;
+  align-items: center;
+}
+
+.options-row-label {
+  margin-right: 10px;
+  width: 100px;
+}

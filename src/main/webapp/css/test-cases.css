@@ -1,0 +1,40 @@
+#test-results-container .sub-title {
+  font-weight: bold;
+  padding: 4px 0px 8px 0px;
+  margin-top: 4px;
+}
+
+#failed-tests-table-container {
+  margin-bottom: 20px;
+}
+
+.msg {
+  color: #999;
+}
+
+.v-table tbody tr td:first-of-type {
+  font-size: 11px;
+}
+
+.v-cell .sub-build-cell {
+  font-size: 11px;
+}
+
+.v-cell .sub-build-cell.no-sub-build {
+  color: #CCC;
+}
+
+.v-cell a.problems {
+  color: white;
+  padding: 0px 3px 0px 3px;
+  text-decoration: none;
+}
+
+.v-cell a.failed {
+  background-color: #AA0000;
+}
+
+.v-cell span.zero-value {
+  color: #CCC;
+  padding-left: 3px;
+}

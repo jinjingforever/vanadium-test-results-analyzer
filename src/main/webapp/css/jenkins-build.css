@@ -1,0 +1,35 @@
+#details-history-blocks-container .history-block.success {
+  background-color: #00AA00;
+  opacity: 0.6;
+}
+
+#details-history-blocks-container .history-block.failure {
+  background-color: #AA0000;
+  opacity: 0.6;
+}
+
+#details-history-blocks-container .history-block.unstable {
+  background-color: #FF8C00;
+  opacity: 0.6;
+}
+
+#details-history-blocks-container .history-block.aborted {
+  background-color: #888;
+  opacity: 0.6;
+}
+
+.v-cell span.success {
+  color: #009900;
+}
+
+.v-cell span.failure {
+  color: #AA0000;
+}
+
+.v-cell span.unstable {
+  color: #FF8C00;
+}
+
+.v-cell span.aborted {
+  color: #888;
+}

@@ -1,0 +1,88 @@
+#status {
+  color: #999;
+}
+
+#status.ok {
+  color: #00BB00;
+}
+
+#status.failed {
+  color: #AA0000;
+  font-weight: bold;
+}
+
+#status-msg {
+  color: #999;
+  padding-left: 4px;
+}
+
+#fix-database {
+  margin-top: 6px;
+  display: none;
+}
+
+.setting-main div {
+  float: left !important;
+}
+
+.table-info {
+  margin-top: 16px;
+}
+
+.table-info .table-name {
+  font-weight: bold;
+  padding-bottom: 4px;
+  background-image: url("../images/table.gif");
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  line-height: 20px;
+}
+
+.table-info .table-row {
+  display: flex;
+  line-height: 18px;
+}
+
+.table-info .row-header {
+  width: 90px;
+  text-align: right;
+}
+
+.table-info .row-value {
+  padding-left: 20px;
+}
+
+#btn-fix {
+  line-height: 24px;
+  padding: 3px 20px 3px 20px;
+  border: 1px solid rgb(204, 204, 204);
+  background-color: #e0e0e0;
+  font-weight: bold;
+  color: #505050;
+  font-size: 12px;
+  text-align: center;
+  width: 200px;
+}
+
+#btn-fix.enabled {
+  cursor: pointer;
+}
+
+#btn-fix.enabled:hover {
+  background-color: #d0d0d0;
+  border: 1px solid #c0c0c0;
+}
+
+#btn-fix.enabled:active {
+  background-color: #bbb;
+  box-shadow: inset 0px 1px 6px 2px #929292;
+  border: 1px solid #bbb;
+}
+
+#fix-error-msg {
+  padding: 8px;
+  margin-top: 4px;
+  color: #999;
+  background-color: rgba(255, 0, 0, 0.1);
+  display: none;
+}

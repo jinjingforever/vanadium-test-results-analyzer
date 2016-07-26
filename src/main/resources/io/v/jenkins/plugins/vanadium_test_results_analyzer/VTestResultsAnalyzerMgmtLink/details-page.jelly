@@ -1,0 +1,21 @@
+<j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
+    <l:main-panel>
+      <div id="details-container">
+        <div id="item-input-container">
+          <input id="item-input" type="text"></input>
+        </div>
+        <div id="details-loading">loading...</div>
+        <div id="details-content">
+          <div id="details-table-subtitle" class="details-subtitle"></div>
+          <div id="details-stats"></div>
+          <div id="details-history-blocks-container"></div>
+          <div id="details-table"></div>
+          <div class="details-subtitle">Durations Histogram</div>
+          <div id="graph-durations-histogram"></div>
+          <div class="details-subtitle">Durations Trend</div>
+          <div id="graph-durations-trend"></div>
+        </div>
+        <div id="details-err-msg"></div>
+      </div>
+    </l:main-panel>
+</j:jelly>

@@ -1,0 +1,40 @@
+#item-input {
+  width: 700px;
+  font-size: 13px;
+}
+
+#details-history-blocks-container .history-block.passed {
+  background-color: #00AA00;
+  opacity: 0.6;
+}
+
+#details-history-blocks-container .history-block.failed {
+  background-color: #AA0000;
+  opacity: 0.6;
+}
+
+#details-history-blocks-container .history-block.skipped {
+  background-color: #888;
+  opacity: 0.6;
+}
+
+.v-cell span.passed {
+  color: #009900;
+}
+
+.v-cell span.failed {
+  color: #AA0000;
+}
+
+.v-cell span.skipped {
+  color: #888;
+}
+
+.tt-menu {
+  width: 700px;
+}
+
+.tt-hint {
+  font-size: 13px;
+  width: 700px;
+}

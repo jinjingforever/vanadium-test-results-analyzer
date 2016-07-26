@@ -1,0 +1,135 @@
+#details-content {
+  display: none;
+}
+
+#details-err-msg {
+  color: #AA0000;
+  display: none;
+}
+
+#details-loading {
+  color: #999;
+}
+
+#details-table {
+  max-height: 500px;
+  overflow-y: auto;
+  width: 500px;
+  border: 1px solid #CCC;
+  margin-top: 2px;
+}
+
+#details-content .v-table {
+  width: 100%;
+}
+
+#details-content .details-subtitle {
+  font-weight: bold;
+  padding: 2px 0px 2px 0px;
+  margin-top: 30px;
+}
+
+#details-stats {
+  color: #666;
+  font-size: 11px;
+}
+
+#details-stats .status-item {
+  cursor: pointer;
+  padding: 2px 3px 2px 3px;
+  display: inline-block;
+}
+
+#details-stats .status-item:first-of-type {
+  padding-left: 0px;
+}
+
+#details-stats .status-item.selected {
+  background-color: #00838F;
+  color: white;
+}
+
+#item-input {
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 4px 0px 4px 2px;
+  width: 500px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.v-time-period-picker-container {
+  margin-top: 20px;
+}
+
+#details-history-blocks-container {
+  display: flex;
+  width: 500px;
+  flex-wrap: wrap;
+  margin: 3px 0px 5px 0px;
+}
+
+#details-history-blocks-container .history-block {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+#details-history-blocks-container .history-block.current {
+  border: 1px solid white;
+}
+
+#details-history-blocks-container .history-block:hover {
+  opacity: 1;
+}
+
+.v-row.highlight-start {
+  background-color: #00838F;
+}
+
+.v-row.highlight-start .v-cell.sorting {
+  background-color: #00838F !important;
+} 
+
+.v-row.highlight-start.highlight-end {
+  background-color: transparent;
+  transition: background-color 1200ms linear;
+}
+
+.v-row.highlight-start.highlight-end .v-cell.sorting {
+  background-color: #EEE !important;
+  transition: background-color 1200ms linear;
+}
+
+.tt-menu {
+  border: 1px solid #CCC;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2px;
+  width: 500px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tt-suggestion {
+  line-height: 16px;
+}
+
+.tt-hint {
+  color: #999;
+  border: 1px solid #999;
+  padding: 4px 0px 4px 2px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 500px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #00838F;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #00838F;
+}

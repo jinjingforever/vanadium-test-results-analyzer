@@ -1,0 +1,33 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <l:layout title="Jenkins Build Details" norefresh="true">
+    <st:include page="sidepanel.jelly"/>
+
+    <l:header>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/details-page.css"/>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/jenkins-build.css"/>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/table.css"/>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/timeperiod-picker.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+      <script src="${rootURL}/plugin/vanadium-test-results-analyzer/js/stupidtable.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+      <script type="text/javascript">
+        var rootURL = "${rootURL}";
+        var it = <st:bind value="${it}"/>;
+        var $j = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/utils.js"/>
+      <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/timeperiod-picker.js"/>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"/>
+      <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/jenkins-build.js"/>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    </l:header>
+
+    <l:breadcrumb title="Jenkins Build Details"/>
+    
+    <st:include page="details-page.jelly"/>
+
+  </l:layout>
+</j:jelly>

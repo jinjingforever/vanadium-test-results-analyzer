@@ -1,0 +1,46 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <l:layout title="Test Cases Overview" norefresh="true">
+    <st:include page="sidepanel.jelly"/>
+
+    <l:header>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/common.css"/>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/test-cases.css"/>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/table.css"/>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/timeperiod-picker.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+      <script src="${rootURL}/plugin/vanadium-test-results-analyzer/js/stupidtable.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+      <script type="text/javascript">
+        var it = <st:bind value="${it}"/>;
+        var $j = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/utils.js"/>
+      <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/timeperiod-picker.js"/>
+      <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/test-cases.js"/>
+    </l:header>
+
+    <l:breadcrumb title="Test Cases Overview" href="test-cases"/>
+
+    <l:main-panel>
+      <div id="test-results-container">
+        <h2>Test Cases Overview</h2>
+        <div id="loading-msg">loading...</div>
+        <div id="err-msg"></div>
+        <div id="content">
+          <div class="sub-title">Failed Tests</div>
+          <div id="failed-tests-table-container"></div>
+          <div class="sub-title">Longest Tests (top 50)</div>
+          <div id="longest-tests-table-container"></div>
+        </div>
+      </div>
+      <noscript>
+        <b><font color="RED">
+          Note: You need to activate Javascript in order for this plugin to work properly!
+        </font></b>
+      </noscript>
+    </l:main-panel>
+  </l:layout>
+</j:jelly>

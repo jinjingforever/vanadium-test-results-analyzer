@@ -1,0 +1,64 @@
+.v-time-period-picker-container {
+  margin-bottom: 20px;
+}
+
+.v-time-period-picker-container .v-title {
+  font-weight: bold; 
+  padding: 4px 0px 4px 0px;
+}
+
+.v-time-period-picker-container #durations-container {
+  display: flex;
+  border: 1px solid #CCC;
+  width: 240px;
+}
+
+.v-time-period-picker-container #durations-container div {
+  width: 24px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.v-time-period-picker-container #durations-container div:hover {
+  background-color: #CCC;
+}
+
+.v-time-period-picker-container #durations-container div.selected {
+  background-color: #00838F;
+  color: white;
+}
+
+.v-time-period-picker-container #time-period-container {
+  margin-bottom: 20px;
+}
+
+.v-time-period-picker-container #v-start-end-time-container {
+  height: 22px;
+  line-height: 22px;
+}
+
+.v-time-period-picker-container #v-start-end-time-container span {
+  padding: 0px 4px 0px 0px;
+}
+
+.v-time-period-picker-container #btn-update {
+  line-height: 16px;
+  height: 16px;
+  padding: 0px 2px 0px 2px;
+  background-color: #00838f;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  display: none;
+}
+
+.v-time-period-picker-container #v-start-end-time-container input {
+  border: 0px solid white;
+  padding: 2px 0px 0px 0px;
+  width: 105px;
+  margin-bottom: 6px;
+  color: #666;
+  cursor: pointer;
+}

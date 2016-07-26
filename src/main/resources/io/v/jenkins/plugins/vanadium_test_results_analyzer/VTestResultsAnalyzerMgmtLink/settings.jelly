@@ -1,0 +1,58 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+ 
+  <l:layout title="Cloud SQL Settings" norefresh="true">
+    <st:include page="sidepanel.jelly"/>
+
+    <l:header>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/settings.css"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+      <script type="text/javascript">
+        var it = <st:bind value="${it}"/>;
+        var $j = jQuery.noConflict();
+      </script>
+      <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/settings.js"/>
+    </l:header>
+
+    <l:breadcrumb title="Settings"/>
+
+    <l:main-panel>
+      <h2>Cloud SQL Settings</h2>
+      <f:section title="Access">
+        <f:form method="post" action="saveSettings">
+          <f:entry title="IP address" field="serverIP" help="/plugin/vanadium-test-results-analyzer/help-serverIP.html">
+            <f:textbox value="${it.settings.serverIP}" name="serverIP"/>
+          </f:entry>
+          <f:entry title="Root password" field="rootPassword" help="/plugin/vanadium-test-results-analyzer/help-rootPassword.html">
+            <f:password value="${it.settings.rootPassword}" name="rootPassword"/>
+          </f:entry>
+          <f:entry title="Disable plugin" help="/plugin/vanadium-test-results-analyzer/help-disablePlugin.html">
+            <f:checkbox name="pluginDisabled" checked="${it.settings.pluginDisabled}"/>
+          </f:entry>
+          <f:validateButton title="Test Connection" progress="Testing..."
+                            method="${it.fullURL}testConnection"
+                            with="serverIP,rootPassword"/>
+          <f:entry>
+            <f:submit value="Save"/>
+          </f:entry>
+        </f:form>
+      </f:section>
+      <f:section title="Status">
+        <div id="status-container">
+          <span id="status">Checking status...</span>
+          <span id="status-msg"></span>
+        </div>
+        <div id="fix-database">
+          <div id="btn-fix" class="enabled">Fix Database and Tables</div>
+          <div id="fix-error-msg"></div>
+        </div>
+      </f:section>
+    
+      <noscript>
+        <b><font color="RED">
+          Note: You need to activate Javascript in order for this plugin to work properly!
+        </font></b>
+      </noscript>
+    </l:main-panel>
+  </l:layout>
+</j:jelly>

@@ -1,0 +1,157 @@
+.build-name-container {
+  padding-left: 2px;
+  display: flex;
+}
+
+.build-name-container .build-name-img{
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.build-name-container.tree-open .build-name-img{
+  background-image: url("../images/tree-open.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 0px 1px;
+}
+
+.build-name-container.tree-close .build-name-img{
+  background-image: url("../images/tree-close.svg");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 0px 1px;
+}
+
+.build-name-container .build-name-img:hover {
+  opacity: 1;
+}
+
+.v-table tr .v-cell:first-of-type {
+  padding-left: 2px !important;
+}
+
+.v-table tbody tr.highlight {
+  background-color: #F2F2F2;
+}
+
+.v-cell span.zero-value {
+  color: #CCC;
+  padding-left: 3px;
+}
+
+.v-cell span.sub-build {
+  font-size: 11px;
+}
+
+.v-cell a.problems {
+  color: white;
+  padding: 0px 3px 0px 3px;
+  text-decoration: none;
+}
+
+.v-cell a.problems.has-sub-build {
+  background-color: transparent !important;
+  padding: 0px 2px 0px 2px;
+}
+
+.v-cell a.failure {
+  background-color: #AA0000;
+}
+
+.v-cell a.failure.has-sub-build {
+  color: #AA0000;
+  border: 1px solid #AA0000;
+}
+
+.v-cell a.unstable {
+  background-color: #FCB514;
+}
+
+.v-cell a.unstable.has-sub-build {
+  color: #FCB514;
+  border: 1px solid #FCB514;
+}
+
+.v-cell a.aborted {
+  background-color: #999;
+}
+
+.v-cell a.aborted.has-sub-build {
+  color: #999;
+  border: 1px solid #999;
+}
+
+.v-cell .build-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.v-table .v-row {
+  padding-left: 0px !important;
+}
+
+.sub-build-row .build-name-container {
+  padding-left: 24px;
+}
+
+.sub-build-row td {
+  color: #888;
+}
+
+.sub-build-row td:first-of-type a {
+  font-size: 11px;
+}
+
+#jenkins-builds-filter-input {
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 2px 0px 2px 0px;
+  width: 200px;
+}
+
+#filter-input-value-container {
+  display: flex;
+  align-items: center;
+}
+
+#link-reset {
+  margin-left: 6px;
+  cursor: pointer;
+  color: #999;
+}
+
+#link-reset:hover {
+  color: #444;
+}
+
+.tt-menu {
+  border: 1px solid #CCC;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2px;
+  width: 200px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tt-suggestion {
+  line-height: 16px;
+}
+
+.tt-hint {
+  color: #999;
+  border: 1px solid #999;
+  padding: 2px 0px 2px 0px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #00838F;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #00838F;
+}
