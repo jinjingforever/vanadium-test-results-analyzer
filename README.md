@@ -49,7 +49,7 @@ Visit this page in the future to see your tables grow.
 
 <div style="text-align:center"><img alt="settings"
 src="https://dl.dropboxusercontent.com/s/g4mizfvtf64syqu/settings.png"
-style="width:601px;"></div>
+width="601px"></div>
 
 ## Enable Plugin In Projects
 
@@ -60,7 +60,7 @@ their "help" icon for more info.
 
 <div style="text-align:center"><img alt="post-build"
 src="https://dl.dropboxusercontent.com/s/kvao4lsh7m0k1q3/postbuild.png"
-style="width:864px;"></div>
+width="864px"></div>
 
 When the plugin is enabled for a project, you will see logs in the console about
 sending data to the analyzer.
@@ -94,7 +94,7 @@ the next section.
 
 <div style="text-align:center"><img alt="jenkins-builds-overview"
 src="https://dl.dropboxusercontent.com/s/v3hp947686fiibd/jenkins-builds-overview.png"
-style="width:969px;"></div>
+width="969px"></div>
 
 ### Jenkins Build Details
 
@@ -108,7 +108,7 @@ top of the page.
 
 <div style="text-align:center"><img alt="jenkins-build-details"
 src="https://dl.dropboxusercontent.com/s/xftjmqqmydnld6p/jenkins-build-details.png"
-style="width:533px;"></div>
+width="533px"></div>
 
 ### Test Cases Overview
 
@@ -119,7 +119,7 @@ case will bring it into the Test Case Details dashboard.
 
 <div style="text-align:center"><img alt="test-cases-overview"
 src="https://dl.dropboxusercontent.com/s/h3v2w737k6bjyab/test-cases-overview.png"
-style="width:1110px;"></div>
+width="1110px"></div>
 
 ### Test Case Details
 
@@ -129,7 +129,7 @@ dashboard.
 
 <div style="text-align:center"><img alt="test-case-details"
 src="https://dl.dropboxusercontent.com/s/fevhfkham4q9fes/test-case-details.png"
-style="width:564px;"></div>
+width="564px"></div>
 
 
 ---
