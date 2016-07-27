@@ -12,6 +12,7 @@ public class Util {
   // Establishes a connection to the given database server.
   static Connection getConnection(String serverIP, String rootPassword, String database)
       throws SQLException {
+    DriverManager.setLoginTimeout(10);
     String url =
         "jdbc:mysql://"
             + serverIP

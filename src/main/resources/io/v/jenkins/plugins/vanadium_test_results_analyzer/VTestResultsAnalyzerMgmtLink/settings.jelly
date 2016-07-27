@@ -1,7 +1,7 @@
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
          xmlns:t="/lib/hudson" xmlns:f="/lib/form">
  
-  <l:layout title="Cloud SQL Settings" norefresh="true">
+  <l:layout title="MySQL Settings" norefresh="true">
     <st:include page="sidepanel.jelly"/>
 
     <l:header>
@@ -17,7 +17,7 @@
     <l:breadcrumb title="Settings"/>
 
     <l:main-panel>
-      <h2>Cloud SQL Settings</h2>
+      <h2>MySQL Settings</h2>
       <f:section title="Access">
         <f:form method="post" action="saveSettings">
           <f:entry title="IP address" field="serverIP" help="/plugin/vanadium-test-results-analyzer/help-serverIP.html">
