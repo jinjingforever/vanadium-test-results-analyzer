@@ -2,7 +2,7 @@
     <l:main-panel>
       <div id="details-container">
         <div id="item-input-container">
-          <input id="item-input" type="text"></input>
+          <input id="item-input" type="text" placeholder="Start typing name here"></input>
         </div>
         <div id="details-loading">loading...</div>
         <div id="details-content">

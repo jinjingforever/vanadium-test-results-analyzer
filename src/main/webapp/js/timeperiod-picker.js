@@ -96,7 +96,7 @@ var timePeriodPicker = function() {
     });
 
     // Set start and end time.
-    if (startTime === undefined && endTime === undefined) {
+    if (!startTime && !endTime) {
       curEndTime = new Date().getTime();
       curStartTime = curEndTime - DURATION_TO_SECS[DEFAULT_DURATION] * 1000;
     } else {

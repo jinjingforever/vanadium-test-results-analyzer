@@ -8,9 +8,22 @@ document.addEventListener('DOMContentLoaded', function() {
   var endTime = parseInt(vUtil.getURLParameter('end'));
   var filters = (vUtil.getURLParameter('f') || '').split(',');
   var subBuildLabels = vUtil.getURLParameter('labels') || '';
-  var initTestCaseLabel = createTestCaseLabel(testName, buildName,
-      subBuildLabels);
-  $j('#item-input').val(initTestCaseLabel);
+
+  // Set up time period picker.
+  var $picker = timePeriodPicker.init({
+    onTimePeriodChanged: function(start, end) {
+      startTime = start;
+      endTime = end;
+      loadTestCaseDetails();
+    }
+  });
+  $picker.insertAfter($j('#item-input-container'));
+  timePeriodPicker.setup(startTime, endTime);
+  if (!startTime && !endTime) {
+    var t = timePeriodPicker.getStartAndEndTime();
+    startTime = t.startTime;
+    endTime = t.endTime;
+  }
 
   // Prepare drop down menu for choosing test cases.
   it.getAvailableTestCases(startTime, endTime, function(t) {
@@ -47,20 +60,17 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  
+  if (testName) {
+    var initTestCaseLabel = createTestCaseLabel(testName, buildName,
+        subBuildLabels);
+    $j('#item-input').val(initTestCaseLabel);
 
-  // Set up time period picker.
-  var $picker = timePeriodPicker.init({
-    onTimePeriodChanged: function(start, end) {
-      startTime = start;
-      endTime = end;
-      loadTestCaseDetails();
-    }
-  });
-  $picker.insertAfter($j('#item-input-container'));
-  timePeriodPicker.setup(startTime, endTime);
-
-  // Start loading data.
-  loadTestCaseDetails();
+    // Start loading data.
+    loadTestCaseDetails();
+  } else {
+    $j('#details-loading').hide();
+  }
 
   /**
    * Loads test case details.
