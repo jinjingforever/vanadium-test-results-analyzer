@@ -49,7 +49,8 @@ public class VTestResultsAnalyzerMgmtLink extends ManagementLink {
   private static final String KEY_DB_STATUS_TABLES = "tables";
   private static final String KEY_DB_STATUS_TABLE_ERR = "errMsg";
   private static final String KEY_DB_STATUS_TABLE_CREATION_TIME = "creationTime";
-  private static final String KEY_DB_STATUS_TABLE_UPDATE_TIME = "updateTime";
+  private static final String KEY_DB_STATUS_TABLE_LAST_UPDATE_TIME = "lastUpdateTime";
+  private static final String KEY_DB_STATUS_TABLE_OLDEST_UPDATE_TIME = "oldestUpdateTime";
   private static final String KEY_DB_STATUS_TABLE_ROW_COUNT = "rowCount";
   private static final String KEY_DB_STATUS_TABLE_SIZE = "size";
 
@@ -229,7 +230,7 @@ public class VTestResultsAnalyzerMgmtLink extends ManagementLink {
 
   @Override
   public String getDescription() {
-    return "Set up cloud SQL and use it to analyze Vanadium test results.";
+    return "Dashboards to see and analyze stats of Jenkins builds and test cases.";
   }
 
   /** Called by UI to construct the correct URI for the "Test Connection" button. */
@@ -351,7 +352,7 @@ public class VTestResultsAnalyzerMgmtLink extends ManagementLink {
         return e.getMessage();
       }
     }
-    
+
     // Check and create Test Results table.
     if (!checkTable(conn, TB_TEST_RESULTS).getString(KEY_DB_STATUS_TABLE_ERR).isEmpty()) {
       try {
@@ -458,7 +459,7 @@ public class VTestResultsAnalyzerMgmtLink extends ManagementLink {
     DateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
     String strStartTime = df.format(new Date(startEpoch));
     String strEndTime = df.format(new Date(endEpoch));
-    
+
     // Query failed tests.
     String strQuery = String.format(SQL_FAILED_TEST_RESULTS, strStartTime, strEndTime);
     String errMsg =
@@ -609,11 +610,18 @@ public class VTestResultsAnalyzerMgmtLink extends ManagementLink {
       }
 
       // Check last update time and row counts.
-      rs = stmt.executeQuery("SELECT count(*), max(update_time) FROM " + tableName);
+      rs =
+          stmt.executeQuery(
+              "SELECT count(*), max(update_time), min(update_time) FROM " + tableName);
       if (rs.next()) {
         ret.put(KEY_DB_STATUS_TABLE_ROW_COUNT, rs.getInt(1));
         Timestamp updateTime = rs.getTimestamp(2);
-        ret.put(KEY_DB_STATUS_TABLE_UPDATE_TIME, updateTime == null ? -1 : updateTime.getTime());
+        ret.put(
+            KEY_DB_STATUS_TABLE_LAST_UPDATE_TIME, updateTime == null ? -1 : updateTime.getTime());
+        Timestamp oldestUpdateTime = rs.getTimestamp(3);
+        ret.put(
+            KEY_DB_STATUS_TABLE_OLDEST_UPDATE_TIME,
+            oldestUpdateTime == null ? -1 : oldestUpdateTime.getTime());
       }
     } catch (SQLException e) {
       ret.put(KEY_DB_STATUS_TABLE_ERR, e.getMessage());

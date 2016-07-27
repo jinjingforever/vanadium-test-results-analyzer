@@ -175,10 +175,11 @@ document.addEventListener(
                     var $ret = $j('<a></a>').attr('class',
                         params.f.toLowerCase() + ' problems').attr('href', href).attr(
                         'target', '_blank').text(label);
-                    if (isRootBuild && hasSubBuilds[item['jenkins_project']]) {
-                      $ret.addClass('has-sub-build');
-                      $ret.attr('title', 'Caused by sub builds');
-                    }
+                    // if (isRootBuild && hasSubBuilds[item['jenkins_project']])
+                    // {
+                    // $ret.addClass('has-sub-build');
+                    // $ret.attr('title', 'Caused by sub builds');
+                    // }
                     return $ret;
                   } else {
                     return document.createTextNode(label);
@@ -289,7 +290,7 @@ document.addEventListener(
         var builds = Object.keys(buildsSet).sort();
 
         // Setup typeahead.
-        var $buildFilter = $j('#jenkins-builds-filter-input');
+        var $buildFilter = $j('#jenkins-builds-filter-input').val('');
         $buildFilter.typeahead('destroy');
         $buildFilter.typeahead({
           hint: true,

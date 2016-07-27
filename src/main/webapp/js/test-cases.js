@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }).join('&');
             var modifiedLabel = vUtil.cleanupTestLabel(label);
             var $link = $j('<a></a>').attr('href', href).attr('target',
-                '_blank').text(modifiedLabel);
+                '_blank').addClass('test-case-link').text(modifiedLabel);
             return $link;
           } else if (colKey === 'jenkins_project') {
             var href = 'jenkins-build?' +

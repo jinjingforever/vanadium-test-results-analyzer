@@ -8,11 +8,11 @@
       <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/jenkins-build.css"/>
       <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/table.css"/>
       <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/timeperiod-picker.css"/>
-      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css"/>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="${rootURL}/plugin/vanadium-test-results-analyzer/css/jquery.datetimepicker.min.css"/>
+      <script src="${rootURL}/plugin/vanadium-test-results-analyzer/js/jquery.min.js"></script>
       <script src="${rootURL}/plugin/vanadium-test-results-analyzer/js/stupidtable.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+      <script src="${rootURL}/plugin/vanadium-test-results-analyzer/js/jquery.datetimepicker.full.min.js"></script>
+      <script src="${rootURL}/plugin/vanadium-test-results-analyzer/js/typeahead.bundle.min.js"></script>
       <script type="text/javascript">
         var rootURL = "${rootURL}";
         var it = <st:bind value="${it}"/>;
@@ -20,7 +20,7 @@
       </script>
       <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/utils.js"/>
       <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/timeperiod-picker.js"/>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"/>
+      <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/jquery.easing.min.js"/>
       <script type="text/javascript" src="${rootURL}/plugin/vanadium-test-results-analyzer/js/jenkins-build.js"/>
       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </l:header>

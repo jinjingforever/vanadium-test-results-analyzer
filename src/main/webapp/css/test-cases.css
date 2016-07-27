@@ -38,3 +38,8 @@
   color: #CCC;
   padding-left: 3px;
 }
+
+.v-cell a.test-case-link {
+  display: inline-block;
+  padding-top: 2px;
+}

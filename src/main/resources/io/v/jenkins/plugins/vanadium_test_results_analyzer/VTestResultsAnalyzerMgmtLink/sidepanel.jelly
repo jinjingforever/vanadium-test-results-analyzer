@@ -1,12 +1,11 @@
 <j:jelly xmlns:j="jelly:core" xmlns:l="/lib/layout">
     <l:side-panel>
       <l:tasks>
-        <l:task icon="images/24x24/up.png" href="${rootURL}/" title="Back to Dashboard"/>
-        <l:task icon="images/24x24/health-80plus.png" href="jenkins-builds" title="Jenkins Builds Overview"/>
-        <l:task icon="images/24x24/health-80plus.png" href="jenkins-build" title="Jenkins Build Details"/>
-        <l:task icon="images/24x24/star.png" href="test-cases" title="Test Cases Overview"/>
-        <l:task icon="images/24x24/star.png" href="test-case" title="Test Case Details"/>
-        <l:task icon="images/24x24/setting.png" href="settings" title="Settings"/>
+        <l:task icon="/plugin/vanadium-test-results-analyzer/images/builds.png" href="jenkins-builds" title="Jenkins Builds Overview"/>
+        <l:task icon="/plugin/vanadium-test-results-analyzer/images/build.png" href="jenkins-build" title="Jenkins Build Details"/>
+        <l:task icon="/plugin/vanadium-test-results-analyzer/images/testcases.png" href="test-cases" title="Test Cases Overview"/>
+        <l:task icon="/plugin/vanadium-test-results-analyzer/images/testcase.png" href="test-case" title="Test Case Details"/>
+        <l:task icon="/plugin/vanadium-test-results-analyzer/images/setting.png" href="settings" title="Settings"/>
       </l:tasks>
     </l:side-panel>
 </j:jelly>

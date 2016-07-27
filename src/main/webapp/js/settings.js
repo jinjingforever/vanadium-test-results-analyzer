@@ -31,14 +31,24 @@ document.addEventListener('DOMContentLoaded', function() {
     $row.append($j('<div class="row-value">' + creationTime + '</div>'));
     $container.append($row);
 
-    // Table update time.
+    // Table's newest entry.
     $row = $j('<div class="table-row"></div>');
-    var updateTime = 'N/A';
-    if (info.updateTime >= 0) {
-      updateTime = new Date(info.updateTime);
+    var lastUpdateTime = 'N/A';
+    if (info.lastUpdateTime >= 0) {
+      lastUpdateTime = new Date(info.lastUpdateTime);
     }
-    $row.append($j('<div class="row-header">Update Time:</div>'));
-    $row.append($j('<div class="row-value">' + updateTime + '</div>'));
+    $row.append($j('<div class="row-header">Newset Entry:</div>'));
+    $row.append($j('<div class="row-value">' + lastUpdateTime + '</div>'));
+    $container.append($row);
+
+    // Table's oldest entry.
+    $row = $j('<div class="table-row"></div>');
+    var oldestUpdateTime = 'N/A';
+    if (info.oldestUpdateTime >= 0) {
+      oldestUpdateTime = new Date(info.oldestUpdateTime);
+    }
+    $row.append($j('<div class="row-header">Oldest Entry:</div>'));
+    $row.append($j('<div class="row-value">' + oldestUpdateTime + '</div>'));
     $container.append($row);
 
     // Row count.
